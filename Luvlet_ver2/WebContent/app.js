@@ -53,7 +53,7 @@ function backButton() {
 	var backButton = document.getElementById("backBtn");
 	
 	backButton.onclick = function() {
-		if(quiz.questionIndex == 0) {
+		if(quiz.questionIndex === 0) {
 			alert("This is first item of this survey.");
 		}
 		else {
@@ -72,7 +72,12 @@ function showProgress() {
 
 function showScores() {
   var gameOverHtml = "<h1>Result</h1>";
-  gameOverHtml += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+  var sum = 0;
+  //alert(quiz.choiceArray);
+  for(var i = 0; i < quiz.choiceArray.length; i++){
+	  sum += quiz.choiceArray[i];
+  }
+  gameOverHtml += "<h2 id='score'> Your scores: " + sum + "</h2>";
   document.getElementById("quiz").innerHTML = gameOverHtml;
 }
 

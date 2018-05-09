@@ -2,6 +2,7 @@ function Quiz(questions) {
   this.score = 0;
   this.questions = questions;
   this.questionIndex = 0;
+  this.choiceArray = [];
 }
 
 Quiz.prototype.getQuestionIndex = function () {
@@ -19,7 +20,14 @@ Quiz.prototype.guess = function(answer, idx) {
   /*if(this.getQuestionIndex().correctAnswer(answer)){
     this.score++;
   }*/
-  this.score = this.score + idx;
-	
+	// [2, 1, 3] 
+  if(this.choiceArray.length > this.questionIndex){
+	  this.choiceArray[this.questionIndex] = idx;
+  }
+  else{
+	  this.score = this.score + idx;
+	  this.choiceArray.push(idx);
+  }
   this.questionIndex++;
 }
+  
