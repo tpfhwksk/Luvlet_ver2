@@ -11,12 +11,14 @@
   <body>
     <div class="grid">
       <div id="survey">
-        <h1>Luvlet</h1>
+        <h1>LUVLET</h1>
         <hr style="margin-bottom:20px">
         
-        <p id="question"></p>
-        
-        <div class="buttons" align="center">
+        <p id="question">첨부할 파일을 업로드 하십시오</p>
+        <div>
+        	<input type="file" id="getfile" accept="text/plain">
+        </div>
+       <!--  <div class="buttons" align="center">
           <button id="btn0"><span id="choice0"></span></button>
           <button id="btn1"><span id="choice1"></span></button>
           <button id="btn2"><span id="choice2"></span></button>
@@ -29,25 +31,12 @@
         <footer>
           <p id="progress">Question x of y.</p>
           
-        </footer>
+        </footer> -->
       </div>
     </div>
     <script src="quiz_controller.js"></script>
     <script src="question.js"></script>
-    <script> // local data 
-      var choiceList = ["전혀", "약간", "웬만큼", "꽤", "아주"];
-
-      var questions = [
-        new Question("머리가 아프다", choiceList, "c"),
-        new Question("신경이 예민하고 마음의 안정이 안 된다 ", choiceList, "good"),
-        new Question("쓸데없는 생각이 머리에서 떠나지 않는다 ", choiceList, "sure"),
-        new Question("어지럽거나 현기증이 난다 ", choiceList, "better"),
-        new Question("성욕이 감퇴되었다", choiceList, "house")
-      ];
-      var quiz = new Quiz(questions);
-    </script>
+    <script src="fileInput.js"></script>
     <script src="app.js"></script>
-    
-    
   </body>
 </html>

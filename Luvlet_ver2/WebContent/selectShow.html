@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Luvlet</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <div class="grid">
+      <div id="survey">
+        <h1>LUVLET</h1>
+        <hr style="margin-bottom:20px">
+        
+        <div>
+          <p>설문조사를 시작하기 전에, 설문조사지를 등록해 주십시오. </p>
+          <div class="buttons" align="center">
+          	<button id="localBtn"><span>로컬데이터로 시작하기</span></button>
+          	<button id="fileBtn"><span>file로 받아오기</span></button>
+          </div>
+        </div>
+        
+        <hr style="margin-top: 50px">
+      </div>
+    </div>
+    <script type="text/javascript" src="start.js" ></script>
+    <script type="text/javascript" src="fileInput.js" ></script>
+    <script>
+   		 var localButton = document.getElementById("localBtn");
+   		 var fileButton = document.getElementById("fileBtn");
+
+   		 localButton.onclick = function() {
+   			 location.href = "main.html";
+   		 }
+   		 
+   		 fileButton.onclick = function() {
+  			 location.href = "fileSurvey.html";
+  		 }
+  		 
+   		 
+    </script>
+  </body>
+</html>

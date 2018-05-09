@@ -1,14 +1,3 @@
-var choiceList = ["전혀", "약간", "웬만큼", "꽤", "아주"];
-
-var questions = [
-  new Question("머리가 아프다", choiceList, "c"),
-  new Question("신경이 예민하고 마음의 안정이 안 된다 ", choiceList, "good"),
-  new Question("쓸데없는 생각이 머리에서 떠나지 않는다 ", choiceList, "sure"),
-  new Question("어지럽거나 현기증이 난다 ", choiceList, "better"),
-  new Question("성욕이 감퇴되었다", choiceList, "house")
-];
-var quiz = new Quiz(questions);
-
 // back btn -> save all point for each survey item. with array? sum convenient.
 
 // if choiceArray.length is bigger than current question index, choiceArray[index] = ~.
@@ -78,7 +67,7 @@ function showScores() {
 	  sum += quiz.choiceArray[i];
   }
   gameOverHtml += "<h2 id='score'> Your scores: " + sum + "</h2>";
-  document.getElementById("quiz").innerHTML = gameOverHtml;
+  document.getElementById("survey").innerHTML = gameOverHtml;
 }
 
 
