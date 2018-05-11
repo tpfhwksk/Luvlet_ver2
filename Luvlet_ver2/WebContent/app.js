@@ -20,7 +20,7 @@ function populate() {
     for(var i = 0; i < choices.length; i++){
       
       document.getElementById("choice" + i).innerHTML = choices[i];
-      guess("btn" + i, choices[i], i);
+      guess("btn" + i, i);
       backButton();
     }
     
@@ -29,11 +29,11 @@ function populate() {
   
 }
 
-function guess(id, guess, idx) {
+function guess(id, idx) {
   var button = document.getElementById(id);
   
   button.onclick = function() {
-    quiz.guess(guess, idx);
+    quiz.guess(idx);
     populate();
   }
 }

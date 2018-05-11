@@ -16,7 +16,7 @@ Quiz.prototype.isEnded = function() {
   return this.questions.length === this.questionIndex;
 }
 
-Quiz.prototype.guess = function(answer, idx) {
+Quiz.prototype.guess = function(idx) {
   
   
   /*if(this.getQuestionIndex().correctAnswer(answer)){
